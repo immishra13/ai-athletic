@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Sports Talent Assessment Design System - Athletic Performance Theme */
+
+@layer base {
+  :root {
+    /* Athletic Brand Colors */
+    --background: 0 0% 99%;
+    --foreground: 220 13% 13%;
+
+    /* Performance Blue Theme */
+    --primary: 214 84% 56%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 214 100% 65%;
+
+    /* Athletic Green Accents */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --success-glow: 142 85% 45%;
+
+    /* Performance Cards */
+    --card: 0 0% 100%;
+    --card-foreground: 220 13% 13%;
+    --card-hover: 214 32% 97%;
+
+    /* Dashboard Elements */
+    --secondary: 214 20% 95%;
+    --secondary-foreground: 220 13% 13%;
+    
+    --muted: 214 13% 94%;
+    --muted-foreground: 220 9% 46%;
+
+    --accent: 214 32% 91%;
+    --accent-foreground: 220 13% 13%;
+
+    /* Status Colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    /* Form Elements */
+    --border: 214 20% 88%;
+    --input: 214 20% 88%;
+    --ring: 214 84% 56%;
+
+    /* Athletic Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(214 84% 56%), hsl(214 100% 65%));
+    --gradient-performance: linear-gradient(135deg, hsl(142 76% 36%), hsl(142 85% 45%));
+    --gradient-dashboard: linear-gradient(180deg, hsl(214 32% 97%), hsl(0 0% 100%));
+
+    /* Athletic Shadows */
+    --shadow-performance: 0 10px 40px -12px hsl(214 84% 56% / 0.35);
+    --shadow-success: 0 8px 30px -8px hsl(142 76% 36% / 0.3);
+    --shadow-card: 0 4px 20px -4px hsl(220 13% 13% / 0.1);
+
+    /* Design System Spacing */
+    --radius: 0.75rem;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark theme for athletic dashboard */
+    --background: 220 27% 8%;
+    --foreground: 214 32% 95%;
+    
+    --primary: 214 100% 65%;
+    --primary-foreground: 220 27% 8%;
+    
+    --card: 220 20% 12%;
+    --card-foreground: 214 32% 95%;
+    --card-hover: 220 15% 15%;
+    
+    --secondary: 220 15% 15%;
+    --secondary-foreground: 214 32% 95%;
+    
+    --muted: 220 12% 18%;
+    --muted-foreground: 214 20% 65%;
+    
+    --accent: 220 15% 15%;
+    --accent-foreground: 214 32% 95%;
+    
+    --border: 220 15% 18%;
+    --input: 220 15% 18%;
+    --ring: 214 100% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+@layer components {
+  /* Athletic Performance Components */
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .gradient-performance {
+    background: var(--gradient-performance);
+  }
+  
+  .gradient-dashboard {
+    background: var(--gradient-dashboard);
+  }
+  
+  .shadow-performance {
+    box-shadow: var(--shadow-performance);
+  }
+  
+  .shadow-success {
+    box-shadow: var(--shadow-success);
+  }
+  
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  
+  /* Test Card Animations */
+  .test-card {
+    @apply transform transition-all duration-300 hover:scale-105 hover:shadow-performance;
+  }
+  
+  /* Performance Metrics */
+  .metric-card {
+    @apply bg-card border border-border rounded-lg p-6 shadow-card hover:shadow-performance transition-all duration-300;
+  }
+  
+  /* Athletic Button Styles */
+  .btn-athletic {
+    @apply bg-primary text-primary-foreground hover:bg-primary-glow font-semibold py-3 px-6 rounded-lg shadow-performance hover:shadow-success transition-all duration-300 transform hover:scale-105;
+  }
+}
